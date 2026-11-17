@@ -1,0 +1,26 @@
+<script>
+let numeros = [];
+
+// Entrada: le 10 numeros inteiros e guarda no vetor
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseInt(prompt("Digite o numero inteiro " + (i + 1) + " de 10:"));
+}
+
+// Processamento: parte do primeiro elemento e compara com os demais
+let maior = numeros[0];
+let menor = numeros[0];
+
+for (let i = 1; i < 10; i++) {
+    if (numeros[i] > maior) {
+        maior = numeros[i];
+    }
+    if (numeros[i] < menor) {
+        menor = numeros[i];
+    }
+}
+
+// Saida: apresenta o maior e o menor
+document.write("<h2>Resultado</h2>");
+document.write("Maior numero: " + maior + "<br>");
+document.write("Menor numero: " + menor + "<br>");
+</script>

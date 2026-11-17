@@ -1,0 +1,39 @@
+<script>
+let notas = [];
+let soma = 0;
+let aprovados = 0;
+let reprovados = 0;
+
+// a) Entrada: le as notas dos 10 alunos e guarda no vetor
+for (let i = 0; i < 10; i++) {
+    notas[i] = parseFloat(prompt("Digite a nota do aluno " + (i + 1) + " de 10:"));
+}
+
+// Processamento: soma as notas e conta aprovados e reprovados
+for (let i = 0; i < 10; i++) {
+    soma = soma + notas[i];
+
+    if (notas[i] >= 6) {
+        aprovados++;
+    } else {
+        reprovados++;
+    }
+}
+
+// b) Calculo da media geral da turma
+let media = soma / 10;
+
+// Saida
+document.write("<h2>Controle de notas da turma</h2>");
+
+// e) Apresenta todas as notas armazenadas no vetor
+document.write("<h3>Notas dos alunos</h3>");
+for (let i = 0; i < 10; i++) {
+    document.write("Aluno " + (i + 1) + ": " + notas[i] + "<br>");
+}
+
+document.write("<h3>Resumo</h3>");
+document.write("Media geral da turma: " + media.toFixed(2) + "<br>");
+document.write("Alunos aprovados (nota >= 6): " + aprovados + "<br>");
+document.write("Alunos reprovados (nota < 6): " + reprovados + "<br>");
+</script>

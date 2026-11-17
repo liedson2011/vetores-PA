@@ -1,0 +1,27 @@
+<script>
+let numeros = [];
+let encontrado = false;
+
+// Entrada: le 10 numeros inteiros e guarda no vetor
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseInt(prompt("Digite o numero inteiro " + (i + 1) + " de 10:"));
+}
+
+// Entrada: numero a ser pesquisado
+let pesquisa = parseInt(prompt("Digite o numero que deseja pesquisar:"));
+
+// Processamento: percorre o vetor procurando o numero
+for (let i = 0; i < 10; i++) {
+    if (numeros[i] == pesquisa) {
+        encontrado = true;
+    }
+}
+
+// Saida: apresenta a mensagem
+document.write("<h2>Resultado da pesquisa</h2>");
+if (encontrado) {
+    document.write("O numero " + pesquisa + " foi encontrado no vetor.<br>");
+} else {
+    document.write("O numero " + pesquisa + " NAO foi encontrado no vetor.<br>");
+}
+</script>

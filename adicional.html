@@ -1,0 +1,25 @@
+<script>
+let numeros = [];
+
+// Entrada: le 10 numeros inteiros e guarda no vetor
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseInt(prompt("Digite o numero inteiro " + (i + 1) + " de 10:"));
+}
+
+// Processamento: ordena o vetor em ordem crescente (bubble sort)
+for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9 - i; j++) {
+        if (numeros[j] > numeros[j + 1]) {
+            let auxiliar = numeros[j];
+            numeros[j] = numeros[j + 1];
+            numeros[j + 1] = auxiliar;
+        }
+    }
+}
+
+// Saida: apresenta os numeros em ordem crescente
+document.write("<h2>Numeros em ordem crescente</h2>");
+for (let i = 0; i < 10; i++) {
+    document.write("Posicao " + i + ": " + numeros[i] + "<br>");
+}
+</script>

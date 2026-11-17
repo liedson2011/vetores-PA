@@ -1,0 +1,34 @@
+<script>
+let vetorA = [];
+let vetorB = [];
+let vetorC = [];
+
+// Entrada: le 5 numeros para o primeiro vetor
+for (let i = 0; i < 5; i++) {
+    vetorA[i] = parseInt(prompt("Vetor A - Digite o numero " + (i + 1) + " de 5:"));
+}
+
+// Entrada: le 5 numeros para o segundo vetor
+for (let i = 0; i < 5; i++) {
+    vetorB[i] = parseInt(prompt("Vetor B - Digite o numero " + (i + 1) + " de 5:"));
+}
+
+// Processamento: soma os elementos das mesmas posicoes
+for (let i = 0; i < 5; i++) {
+    vetorC[i] = vetorA[i] + vetorB[i];
+}
+
+// Saida: apresenta os tres vetores lado a lado
+document.write("<h2>Resultado</h2>");
+document.write("<table border='1' cellpadding='5'>");
+document.write("<tr><th>Posicao</th><th>Vetor A</th><th>Vetor B</th><th>Vetor C (A + B)</th></tr>");
+for (let i = 0; i < 5; i++) {
+    document.write("<tr>");
+    document.write("<td>" + i + "</td>");
+    document.write("<td>" + vetorA[i] + "</td>");
+    document.write("<td>" + vetorB[i] + "</td>");
+    document.write("<td>" + vetorC[i] + "</td>");
+    document.write("</tr>");
+}
+document.write("</table>");
+</script>

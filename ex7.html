@@ -1,0 +1,14 @@
+<script>
+let numeros = [];
+
+// Entrada: le 10 numeros inteiros e guarda no vetor
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseInt(prompt("Digite o numero inteiro " + (i + 1) + " de 10:"));
+}
+
+// Saida: apresenta os numeros na ordem inversa
+document.write("<h2>Numeros na ordem inversa</h2>");
+for (let i = 9; i >= 0; i--) {
+    document.write("Posicao " + i + ": " + numeros[i] + "<br>");
+}
+</script>

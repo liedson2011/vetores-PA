@@ -1,0 +1,20 @@
+<script>
+let notas = [];
+let soma = 0;
+
+// Entrada: le 8 notas e guarda no vetor
+for (let i = 0; i < 8; i++) {
+    notas[i] = parseFloat(prompt("Digite a nota " + (i + 1) + " de 8:"));
+}
+
+// Processamento: soma as notas e calcula a media
+for (let i = 0; i < 8; i++) {
+    soma = soma + notas[i];
+}
+
+let media = soma / 8;
+
+// Saida: apresenta a media
+document.write("<h2>Resultado</h2>");
+document.write("Media das notas: " + media.toFixed(2) + "<br>");
+</script>

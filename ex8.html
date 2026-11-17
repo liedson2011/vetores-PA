@@ -1,0 +1,28 @@
+<script>
+let numeros = [];
+let positivos = 0;
+let negativos = 0;
+let zeros = 0;
+
+// Entrada: le 10 numeros inteiros e guarda no vetor
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseInt(prompt("Digite o numero inteiro " + (i + 1) + " de 10:"));
+}
+
+// Processamento: percorre o vetor e conta cada tipo
+for (let i = 0; i < 10; i++) {
+    if (numeros[i] > 0) {
+        positivos++;
+    } else if (numeros[i] < 0) {
+        negativos++;
+    } else {
+        zeros++;
+    }
+}
+
+// Saida: apresenta as quantidades
+document.write("<h2>Resultado</h2>");
+document.write("Quantidade de numeros positivos: " + positivos + "<br>");
+document.write("Quantidade de numeros negativos: " + negativos + "<br>");
+document.write("Quantidade de zeros: " + zeros + "<br>");
+</script>
